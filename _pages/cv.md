@@ -11,54 +11,34 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Computer Vision, University of Bristol, 2023 - Present
+* MSc Robotics , University of Bristol 2017 - 2018
+* BEng(Hons) Mechanical Engineering, University of Southampton 2014 - 2017 
+
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Ask-JGI: Data Scientist, Jean Golding Institute (October 2024 - Present) 
+  * Provide consultations in data analysis, data visualization, and software development
+  * Conducted code reviews and provided guidance on reproducible analysis pipelines 
+  * Consulted on research planning and experimental design 
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Machine Learning Engineer, Etisalat Misr (February 2020 – September 2023)
+  * AI-powered Chatbot conversations flow design
+  * Improve dialogue management for better conversation experience
+  * Annotation and data processing pipelines for image data
+  * Build and train deep learning models for OCR tasks
+  * Fine-tune models for document understanding and evaluate performance
+  * Design and implement software architecture for the OCR solution
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* Machine Learning Frameworks
+  * Scikit-learn
+  * TensorFlow
+  * Keras
+  * Pytorch
+* API Development
+  * Flask
+  * FastAPI
