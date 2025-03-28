@@ -80,3 +80,149 @@ I am a second year PhD Student in Computer Vision at the University of Bristol s
   color: var(--link-visited-color);
 }
 </style>
+
+# Publications
+
+<div class="publications-scroll-container">
+  {% assign sorted_publications = site.publications | sort: 'year' | reverse %}
+  {% for pub in sorted_publications %}
+    <div class="publication-item">
+      <div class="publication-content">
+        {% if pub.figure %}
+        <div class="publication-figure">
+          <img src="{{ pub.figure }}" alt="Publication Figure for {{ pub.title }}" class="pub-image">
+        </div>
+        {% endif %}
+        
+        <div class="publication-details">
+          <p class="publication-entry">
+            {{ pub.title }}
+          </p>
+          
+          {% if pub.citation %}
+          <p class="publication-citation">
+            {{ pub.citation }}
+          </p>
+          {% endif %}
+          
+          <div class="publication-links">
+            {% if pub.paper_link %}
+            <a href="{{ pub.paper_link }}" target="_blank" class="paper-link">Paper</a>
+            {% endif %}
+            
+            {% if pub.website %}
+            <a href="{{ pub.website }}" target="_blank" class="website-link">Project Website</a>
+            {% endif %}
+            
+            {% if pub.doi %}
+            <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="doi-link">DOI</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.publications-scroll-container {
+  max-height: 500px; /* Increased height to accommodate larger figures */
+  overflow-y: auto;
+  border: none; /* Remove border */
+  padding: 10px;
+  background-color: var(--background-primary);
+  margin-top: 15px;
+  color: var(--text-primary);
+  font-size: 0.85em;
+}
+
+.publication-item {
+  margin-bottom: 15px;
+  border-bottom: none; /* Remove bottom border */
+  padding-bottom: 10px;
+}
+
+.publication-content {
+  display: flex;
+  align-items: stretch; /* Ensure equal height */
+  }
+
+.publication-figure {
+  margin-right: 15px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  }
+
+.pub-image {
+  max-width: 250px; /* Maintained figure size */
+  max-height: 150px; /* Limit height to match citation section */
+  width: auto;
+  height: auto;
+  max-height: 150px;
+  /* object-fit: contain; Preserve aspect ratio */
+  }
+
+.publication-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center text */
+  }
+
+.publication-citation {
+  margin: 0 0 10px 0;
+  font-size: 0.75em;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  }
+
+.publication-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.publication-links a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 3px 8px;
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.publication-links a:hover {
+  color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+  background-color: rgba(0,102,204,0.1);
+}
+
+.publication-entry {
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+
+.publication-entry a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em !important; /* Force larger size */
+  font-weight: 900 !important; /* Force extra bold */
+}
+
+.publication-entry a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.publication-entry strong {
+  margin-right: 8px;
+  color: var(--text-secondary);
+  font-size: 1em;
+}
+
+</style>
